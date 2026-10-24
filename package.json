@@ -1,0 +1,20 @@
+{
+  "name": "fun-run-finish-line",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Live finish-line check-in and leaderboard for your fun run.",
+  "workspaces": ["frontend", "backend"],
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run build --workspace frontend",
+    "test": "npm test --workspace backend && npm test --workspace frontend",
+    "desktop:prepare": "node scripts/prepare-desktop.mjs",
+    "desktop:dev": "npm run desktop:prepare && tauri dev --config src-tauri/tauri.conf.json",
+    "desktop:build": "tauri build --config src-tauri/tauri.conf.json --bundles nsis",
+    "desktop:package": "node scripts/package-desktop.mjs",
+    "start": "npm run build && concurrently -n api,web -c blue,green \"npm run start --workspace backend\" \"npm run preview --workspace frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

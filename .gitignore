@@ -1,0 +1,9 @@
+node_modules/
+frontend/dist/
+backend/*.sqlite*
+backend/backups/*
+backend/desktop-runtime/node_modules/
+backend/desktop-runtime/src/
+src-tauri/binaries/*.exe
+src-tauri/resources/backend-runtime/
+src-tauri/target/

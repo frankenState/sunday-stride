@@ -1,0 +1,1 @@
+{"default":{"identifier":"default","description":"Sunday Stride desktop windows","local":true,"windows":["main","projector"],"permissions":["core:default","core:webview:allow-create-webview-window","core:window:allow-show","core:window:allow-set-focus"]}}
